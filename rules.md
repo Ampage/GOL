@@ -26,5 +26,5 @@ You should use 16 MPI processes. Each process should handle a 40 cell wide by 5 
 File Read
 =========
 The initial configuration (which cells are dead and which cells are live) should be read in from a file called initial_config.txt.
-Again, X means dead, O means love. The file will have 80 lines, each with 41 characters (41 because of the new line character!).
-« ALMOST DONE »
+Again, X means dead, O means alive. The file will have 80 lines, each with 41 characters (41 because of the new line character!).
+« DONE »
