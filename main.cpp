@@ -5,11 +5,6 @@
  * The Game of Life is an autonomous game that does not require any human interaction except for the initial
  * grid sequence. The game can continue forever or it may end in one turn depending on the initial conditions.
  *
- * =========
- * Resources
- * =========
- *
- * 1. http://www.dreamincode.net/forums/topic/382784-global-array-becoming-null-after-appending-elements/
  */
 
 #include <stdio.h>
@@ -41,13 +36,13 @@ void fillGrid(void) {
         while (fgets(line, sizeof line, data) != NULL) {
             for (i = 0; i < MAX_WIDTH; i++) {
                 INIT_GRID[count][i] = line[i];
-                printf("%c", INIT_GRID[count][i]);
+                //printf("%c", INIT_GRID[count][i]);
                 count++;
             }
-            printf("\n");
+            //printf("\n");
         }
 
-        if (count < MAX_HEIGHT) // not enough lines were passed
+        if (count < MAX_HEIGHT) // not enough lines were passed from the file
         {
             exit(EXIT_FAILURE);
         }
@@ -59,10 +54,13 @@ int main(void) {
 
     char height;
     char width;
-    int round = 0;
+    int round = 1;
 
     fillGrid();
+    if (round <= 5) {
 
+        // run sim
+    }
 
     return 0;
 }
